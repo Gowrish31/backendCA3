@@ -34,7 +34,7 @@ const verifyToken = (req,res,next)=>{
         if(err){
             return res.status(401).json({message:"error has occured"})
         }
-        res.user(decoded);
+        res.send({decoded})
         next();
     })
 }
